@@ -1,0 +1,219 @@
+* { /*selector universal para aplicar un estilo*/
+      margin: 5px; /*establece un margen alrededor de cada elemento*/
+      padding: 5px; /*establece un relleno dentro de cada elemento*/
+  }
+  
+  head {
+      background-image: url('imagenes/facial.jpg'); /* Cambia la ruta a tu imagen */
+      background-repeat: no-repeat; /* Evitar que la imagen se repita */
+      background-size: cover; /* Ajustar la imagen para cubrir todo el contenedor */
+      background-position: center; /* Centrar la imagen */
+      padding: 10px; /* Espaciado interno */
+      text-align: center; /* Centrar el texto */
+  }
+
+  
+  body {
+      margin: 0; /* Eliminar margen */
+      padding: 0; /* Eliminar padding */
+      background-color: #dcdcdfec; /* Color de fondo principal */
+      background-image: url('imagenes/hoja1.png'), url('imagenes/hoja2.png'), url('imagenes/logo_sunset.png'), url('imagenes/hoja3.png'), url('imagenes/hoja4.png'); /* Rutas de tus imágenes */
+      background-repeat: no-repeat; /* No repetir las imágenes */
+      background-position: calc(100% - 20px) 30px, 20px 30px, center bottom 50px, right bottom, left bottom; /* Ajustar para simular márgenes */
+      /*right top, left top, center; Colocar una en la esquina superior derecha y otra en la esquina superior izquierda */
+      background-size: 330px , 330px, 430px, 330px; /* Ajustar el tamaño de las imágenes */
+      border-radius: 15px; /* Ajusta el valor según cuánto quieras redondear */
+      font-family: Arial, sans-serif; /* Cambia a la fuente que prefieras */
+      color: black;
+      transition: background-color 0.3s, color 0.3s;
+  }
+
+  button {
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: hsla(0, 2%, 65%, 0.702); /* Color de fondo del botón */
+      color: white; /* Color de texto del botón */
+      border: none; /* Sin borde */
+      border-radius: 15px; /* Bordes redondeados */
+      cursor: pointer; /* Cambia el cursor al pasar el mouse */
+      transition: background-color 0.3s; /* Transición para el color de fondo */
+      margin-bottom: 0px; /* Espacio debajo del botón */
+  }
+
+  button:hover {
+      background-color: #727577; /* Color de fondo al pasar el mouse */
+  }
+
+  body.dark-mode {/*cambia el fondo de claro a oscuro segun la preferencia*/ 
+      background-color: hsl(0, 1%, 32%);
+      color: white;
+  }
+
+  body.dark-mode button {
+      background-color:  hsla(0, 2%, 65%, 0.702);; /* Color de fondo del botón en modo oscuro */
+  }
+
+  body.dark-mode button:hover {
+      background-color: #bcb8b8; /* Color al pasar el mouse en modo oscuro */
+  }
+
+  .content {
+      width: 93.8%; /*ancho,Establece el ancho del elemento al 93.8% del ancho de su contenedor padre.*/
+      /*background-color: rgb(142, 139, 139);/*Define el color de fondo del elemento.*/
+      color: rgb(11, 11, 11); /*Establece el color del texto*/
+      padding: 40px; /*Aplica un relleno en todos los lados del contenido del elemento*/
+      padding-top: 20px; /*Modifica el relleno superior, lo que significa que el relleno superior es diferente al de los otros lados.*/
+      margin: 10px; /*Crea un margen alrededor del elemento, separándolo de otros elementos.*/
+      text-align: justify; /*Alinea el texto (justify, center, ) */
+      border-radius: 15px; /*Redondea las esquinas del borde del elemento, dándole un aspecto más suave.*/
+      opacity: 0.9; /*Establece la opacidad del elemento, lo que significa que será un poco transparente.*/
+      font-size: 24px; /* Cambia el tamaño de la letra */
+      /*border: 1px solid rgba(251, 226, 82, 0.638);/*Aplica un borde sólido alrededor del elemento y el color del borde del contenedor*/
+  }
+        
+  #contenedor {
+      width: 98.5%; /*Establece el ancho del contenedor*/
+      /*border: 1px solid rgba(251, 226, 82, 0.638);/*borde y color del contenedor*/
+      line-height: 100%;/*Establece la altura de las líneas dentro del contenedor al 100%, lo que puede influir en la altura de las líneas de texto, pero a menudo se utiliza para mantener una altura de línea estándar.*/
+      /*background-color: hwb(0 48% 51% / 0.993); /*color de fondo del contenedor*/
+      overflow: hidden; /* Asegura que el contenedor envuelva las columnas flotantes */
+      text-align: center; /*texto centrado*/
+      display: flex; /* Usar flexbox para alinear elementos, Cambia el modelo de caja del contenedor a flexbox, lo que facilita la alineación y distribución de los elementos secundarios. */
+      flex-wrap: wrap; /* Permitir que los elementos se envuelvan en la siguiente línea si no hay suficiente espacio */
+      justify-content: center; /* Centrar elementos */
+      margin: 10px; /* Espaciado externo del contenedor */
+      border-radius: 15px;/*Redondea las esquinas del contenedor, dándole un aspecto más suave y moderno.*/
+  }
+
+  #contenedor > div {
+      text-align: center; /* Centrar el texto debajo de las imágenes */
+      margin: 10px; /* Espaciado entre las columnas */
+  }
+
+  #contenedor p {
+      margin-top: 5px; /* Espaciado entre la imagen y el texto */
+      color: hsl(50, 88%, 46%); /* Color del texto */
+      font-size: 25px; /* Tamaño de la fuente (ajusta según necesites) */
+  }
+
+  #contenedor > div {
+      margin: 10px; /* Espaciado entre las columnas */
+  }
+
+  .redes-sociales {
+      margin-top: 10px; /* Espacio entre el texto y los íconos */
+      margin-right: 150px; /* Ajusta el margen derecho según necesites */
+  }
+
+  .redes-sociales a {
+      margin: 0 10px; /* Espacio entre los íconos */
+  }
+
+  .redes-sociales img {
+      vertical-align: middle; /* Alinear verticalmente los íconos */
+  }
+
+  .titulo-rv {
+      color:  hsl(50, 88%, 46%); /* Cambia este color por el que desees */
+      font-size: 30px; /* Cambia el tamaño de la letra */
+      padding: 0px;/*establece un margen alrededor de cada elemento*/
+      padding: 0px; /*establece un relleno dentro de cada elemento*/
+  }
+
+  .box {
+      text-align: right; /*texto a la izquierda*/
+  }
+
+  .cabecera{ /* el . significa que es un class*/
+      background-color: hwb(60 2% 98%); /* Color de fondo del menu*/
+      padding: 0px; /* Añadir un poco de padding para el espacio */
+      text-align: center; /* Centrar el texto horizontalmente */
+  }
+  
+  .menu {
+      list-style: none; /* Quitar puntos de la lista */
+      padding: 0px; /* Quitar padding */
+      margin: 0px; /* Quitar margin */
+      display: flex; /* Usar flexbox para disposición horizontal */
+      justify-content: left; /* Centrar los elementos de la lista horizontalmente */
+      align-items: center; /* Centrar verticalmente los elementos */
+      margin-top: 0px; /* Ajusta el margen de arriba según necesites */
+  }
+
+  .menu li {
+      margin-right: 1px; /* Espaciado entre elementos */
+      white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+  }
+
+  .menu a {
+      text-decoration: none; /* Quitar subrayado */
+      color: rgba(228, 207, 16, 0.91); /* Color del texto */
+      padding: 10px; /* Espaciado interno */
+      border-radius: 30px; /* Bordes redondeados */
+      align-items: center; /* Centrar verticalmente los elementos */
+      font-size: 20px; /* Cambia el tamaño de la letra */
+  }
+
+  .menu a:hover {
+        background-color: #b2b2b1e2; /* Color de fondo al pasar el mouse */
+  }
+
+  .carrusel {
+      position: relative; /*Establece que el posicionamiento del elemento es relativo. Esto significa que se posicionará en relación a su posición original en el flujo del documento. Permite que los elementos secundarios con position: absolute; se posicionen en relación al carrusel.*/
+      max-width: 900px; /* Ancho máximo del carrusel */
+      margin: auto;/*Aplica márgenes automáticos a los lados izquierdo y derecho, lo que centra el carrusel horizontalmente dentro de su contenedor padre.*/
+      overflow: hidden; /* Esconde las imágenes que están fuera de vista */
+  }
+  
+  .carrusel-container {
+      display: flex;/* activa el modelo de caja flexible (flexbox) en el elemento */
+      transition: transform 0.5s ease; /* Transición suave al mover las imágenes */
+  }
+  
+  .carrusel-img {
+      width: 100%; /* Asegura que las imágenes ocupen el ancho completo */
+      display: block; /* Quita el espacio extra debajo de las imágenes */
+  }
+  
+  button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: hsla(0, 2%, 65%, 0.702);
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+  }
+  
+  .prev {
+      left: 10px; /* Posiciona el botón a la izquierda */
+  }
+  
+  .next {
+      right: 10px; /* Posiciona el botón a la derecha */
+  }
+
+  .articulos {
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Espacio entre columnas */
+    list-style: none; /* Quitar puntos de la lista */
+    padding: 0; /* Quitar padding */
+    margin: 0; /* Quitar margin */
+}
+
+.articulos li {
+    flex: 1; /* Permitir que cada columna ocupe el mismo espacio */
+    text-align: center; /* Centrar texto en cada columna */
+    margin: 0 10px; /* Espacio entre columnas */
+}
+
+.articulos img {
+  max-width: 100%; /* Asegurar que las imágenes no excedan el ancho del contenedor */
+  height: auto; /* Mantener la proporción de la imagen */
+  margin-bottom: 5px; /* Espacio entre la imagen y el texto */
+}
+
+.articulos p {
+    margin: 5px 0; /* Espaciado entre el enlace y el texto */
+}
+
