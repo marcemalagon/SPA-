@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>SUNSET SPA</title> <!-- es el nombre que sale en la pestaña de la pag de la web -->
             <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Vincula tu archivo CSS aquí -->
-           
     </head>
 
     <footer style="display: flex; justify-content: space-between; align-items: center; padding: 0px;">
@@ -15,7 +14,7 @@
         </div>
         
         <img src="imagenes/princip.jpg" alt="Imagen superior" width="16%" ; style="margin: 5px 0; border-radius: 15px;"> <!-- Imagen centrada -->
-        <img src="imagenes/1.jpg" alt="Imagen superior" width=16%" ; style="margin: 5px -50; border-radius: 15px;"> <!-- Imagen centrada -->
+        <img src="imagenes/relaxrv.png" alt="Imagen superior" width=11%" ; style="margin: 5px -50; border-radius: 15px;"> <!-- Imagen centrada -->
         <img src="imagenes/2.jpg" alt="Imagen superior" width="16%" ; style="margin: 5px 0; border-radius: 15px;"> <!-- Imagen centrada -->
 
         <div class="redes-sociales">
@@ -26,17 +25,12 @@
             <a href="https://www.facebook.com/tu_perfil" target="_blank">
                 <img src="imagenes/fb.png" alt="Facebook" width="40px">
             </a>
-           <br>
-            <a href="https://www.youtube.com/tu_canal" target="_blank">
-                <img src="imagenes/wpp.png" alt="YouTube" width="40px">
-            </a>
             <br>
             <a href="https://wa.me/<tu_número>" target="_blank">
                 <img src="imagenes/wpp.png" alt="WhatsApp" width="40px">
             </a>
         </div>
     </footer>
-    
 
     <body>
     
@@ -45,104 +39,87 @@
                 <ul class="menu">
                     <li><a href="PAG_PRINCIPAL.HTML"><strong>Inicio</strong></a></li>
                     <li><a href="servicios.HTML"><strong>Servicios</strong></a></li>
-                    <li><a href="planes_spa.html"><strong>Planes</strong></a></li>
-                    <li><a href="eventos.html"><strong>Eventos</strong></a></li>
-                    <li><a href="reservas.html"><strong>Reservas</strong></a></li>
+                    <li><a href="planes_spa.html"><strong>Planes y Eventos</strong></a></li>
                 </ul>
             </div>
         </header>
     
-        <main>
-            <div class="content">Este es un contenido con fondo blanco y color de texto personalizado.</div>
-        
-            <div id="contenedor">
-
-                <div id="columna1">
-                
-                    <video width="300" height="200" controls>
-                        <source src="videos\video.mp4" type="video/mp4">
-                    </video>
-                    <p>Texto para la video 1</p>
+        <header>
+            <h1>Reserva tu cita en nuestro Spa</h1>
+        </header>
+    
+        <div class="container">
+            <form id="reservation-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-            
-                <div id="columna2">
-                    <video width="300" height="200" controls>
-                        <source src="videos\chorros.mp4" type="video/mp4">
-                    </video>
-                    <p>Texto para la video 2</p>
+                <div class="form-group">
+                    <label for="id">Cedula</label>
+                    <input type="number" id="id" name="id" required>
                 </div>
-        
-                <br>
-            
-                <div id="columna3">
-                    <video width="300" height="200" controls>
-                        <source src="videos\cascada.mp4" type="video/mp4">    
-                    </video>
-                    <p>Texto para la video 3</p>
+                <div class="form-group">
+                    <label for="cel">Contacto</label>
+                    <input type="number" id="cel" name="cel" required>
                 </div>
-            
-                <div id="columna4">
-                    <video width="300" height="200" controls>
-                        <source src="videos\agua.mp4" type="video/mp4">
-                    </video>
-                    <p>Texto para la video 4</p>
+    
+                <div class="form-group">
+                    <label for="service">Selecciona un Servicio</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Selecciona --</option>
+                        <option value="masaje">Tratamiento Facial</option>
+                        <option value="facial">Tratamiento Corporal</option>
+                        <option value="manicure">Relajación</option>
+                        <option value="manicure">Hidroterapia</option>
+                    </select>
                 </div>
-            </div>
+    
+                <div class="form-group">
+                    <label for="date">Fecha de la cita</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="time">Hora de la cita</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+    
+                <div class="form-group">
+                    <button type="submit">Reservar Cita</button>
+                </div>
+    
+                <div id="confirmation-message" class="hidden">
+                    <p><strong>¡Reserva exitosa!</strong> Gracias por elegirnos, <span id="user-name"></span>.</p>
+                    <p>Tu cita para el servicio de <span id="user-service"></span> está confirmada para el <span id="user-date"></span> a las <span id="user-time"></span>.</p>
+                </div>
+            </form>
             <br>
-                        
-            <div class="content">Este es un contenido con fondo blanco y color de texto personalizado.</div>
             <br>
-
-            <div class="carrusel">
-                <div class="carrusel-container">
-                    <img src="imagenes/1.jpg" alt="Imagen 1" class="carrusel-img">
-                    <img src="imagenes/2.jpg" alt="Imagen 2" class="carrusel-img">
-                    <img src="imagenes/3.jpg" alt="Imagen 3" class="carrusel-img">
-                    <img src="imagenes/madre.jpg" alt="Imagen 4" class="carrusel-img">
-                </div>
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
-            </div>
-                <br>
-
-                <h1>Mi Blog de salud para mente y cuerpo</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#articulo1">Artículo 1</a></li>
-                        <p>Texto 1</p>
-                        <li><a href="#articulo2">Artículo 2</a></li>
-                        <p>Texto 2</p>
-                        <li><a href="#contacto">Contacto</a></li>
-                        <p>Texto 3</p>
-                    </ul>
-                </nav>
-            </main>     
-           
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>   
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
         <footer style="text-align: center;">
+            <br>
+            <br>
             <p>PBX: (+57) 601xxxxxx / (+57) 601xxxxxx / WHATSAPP: (+57) 3xx xxxxxx</p>
             <p>© 2024 SUNSET. Todos los derechos reservados.</p>
         </footer>
            
-        <script>
-            let slideIndex = 0;
-            
-            function showSlides() {
-                const slides = document.querySelectorAll('.carrusel-img');
-                if (slideIndex >= slides.length) { slideIndex = 0 }
-                if (slideIndex < 0) { slideIndex = slides.length - 1 }
-                
-                const container = document.querySelector('.carrusel-container');
-                container.style.transform = `translateX(${-slideIndex * 100}%)`;
-            }
-            
-            function moveSlide(n) {
-                slideIndex += n;
-                showSlides();
-            }
-            
-            // Muestra la primera imagen al cargar
-            showSlides();
-        </script>
+        
+    
     
     </body>
 </html>
